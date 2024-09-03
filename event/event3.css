@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.judul {
+    font-weight: bold;
+    font-size: 25px;
+}
+#point {
+    padding: 5px;
+    width: 100px;
+    border-radius: 5px;
+    margin: 5px 8px 5px 0;
+    border: 1px solid black;
+}
+#deskripsi {
+    padding: 5px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#button {
+    padding: 7px;
+    margin-top: 5px;
+    border: none;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+}

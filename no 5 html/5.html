@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .warna {
+            background-color: red;
+            display: none;
+            color: white;
+            height: 40px;
+            align-items: center;
+        }
+        #submit {
+            padding: 10px;
+            background-color: greenyellow;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="warna" id="countdowndisplay"></div>
+    <button id="submit">Munculkan Alert</button>
+
+
+    <script>
+        const countdowndisplay = document.getElementById('countdowndisplay')
+        const submit = document.getElementById('submit')
+
+        let countdownInterval;
+        submit.addEventListener('click', function(){
+            let countdownValue = 5;
+            countdowndisplay.textContent = countdownValue;
+            countdowndisplay.style.display = "block"
+
+            countdownInterval = setInterval(function() {
+                countdownValue--;
+                countdowndisplay.textContent = countdownValue;
+
+                if (countdownValue === 0) {
+                    clearInterval(countdownInterval);
+                    countdowndisplay.style.display = "none"
+                }
+            }, 1000)
+        })
+    </script>
+</body>
+</html>

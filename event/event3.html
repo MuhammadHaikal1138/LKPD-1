@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="event3.css">
+</head>
+<body>
+    <p class="judul">Opsi Jawaban dan Poin</p>
+        <div class="option">
+            <label for="" id="opsi">Opsi 1</label>
+            <div class="poin-opsi">
+                <input type="number" placeholder="Point" id="point">
+                <input type="text" placeholder="Deskripsi Opsi" id="deskripsi">
+            </div>
+        </div>
+        <div id="tambah_opsi" class="option"></div>
+        <div>
+            <button onclick="AddOpsi()" id="button">
+                + Tambah
+            </button>
+        </div>
+    <script>
+        let no = 1
+        function AddOpsi() {
+            no++;
+            let add = document.getElementById("tambah_opsi");
+            
+            add.innerHTML += `
+            <div class="option">
+            <label for="" id="opsi">Opsi ${no}</label>
+            <div class="poin-opsi">
+                <input type="number" placeholder="Point" id="point">
+                <input type="text" placeholder="Deskripsi Opsi" id="deskripsi">
+            </div>
+        </div>
+            `;
+        }
+    </script>
+</body>
+</html>

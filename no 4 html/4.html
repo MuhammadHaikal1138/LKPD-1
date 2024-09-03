@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+
+    <img src="" alt="" id="gambar-1" style="width: 200px;">
+    <div class="pilihan">
+        <select name="gambar" id="gambar">
+            <option value="JKT48.jpg">JKT48</option>
+            <option value="AKB48.jpg">AKB48</option>
+            <option value="ske.jpg">SKE48</option>
+        </select>
+        <select name="opacity" id="opacity">
+            <option value="1">1</option>
+            <option value="0.5">0.5</option>
+            <option value="0.2">0.2</option>
+        </select>
+    </div>
+    
+
+    <script>
+        document.getElementById("gambar").addEventListener("change", function(){
+            let hasil_gambar = document.getElementById("gambar").value
+            document.getElementById("gambar-1").src = hasil_gambar
+        })
+        document.getElementById("opacity").addEventListener("change", function(){
+            let hasil_opacity = document.getElementById("opacity").value
+            document.getElementById("gambar-1").style.opacity = hasil_opacity
+        })
+    </script>
+</body>
+</html>
